@@ -1,0 +1,173 @@
+{
+    "name": "Venusaur",
+    "nationalDexNumber": 3,
+    "forms": [
+        {
+            "formName": "venusaur",
+            "movePool": [
+                "swords-dance",
+                "cut",
+                "bind",
+                "vine-whip",
+                "headbutt",
+                "tackle",
+                "body-slam",
+                "take-down",
+                "double-edge",
+                "growl",
+                "roar",
+                "hyper-beam",
+                "strength",
+                "mega-drain",
+                "leech-seed",
+                "growth",
+                "razor-leaf",
+                "solar-beam",
+                "poison-powder",
+                "sleep-powder",
+                "petal-dance",
+                "string-shot",
+                "earthquake",
+                "toxic",
+                "rage",
+                "mimic",
+                "double-team",
+                "defense-curl",
+                "light-screen",
+                "reflect",
+                "bide",
+                "amnesia",
+                "flash",
+                "rest",
+                "substitute",
+                "snore",
+                "curse",
+                "protect",
+                "scary-face",
+                "sludge-bomb",
+                "mud-slap",
+                "outrage",
+                "giga-drain",
+                "endure",
+                "charm",
+                "false-swipe",
+                "swagger",
+                "fury-cutter",
+                "attract",
+                "sleep-talk",
+                "return",
+                "frustration",
+                "safeguard",
+                "sweet-scent",
+                "synthesis",
+                "hidden-power",
+                "sunny-day",
+                "rock-smash",
+                "facade",
+                "nature-power",
+                "helping-hand",
+                "ingrain",
+                "knock-off",
+                "secret-power",
+                "weather-ball",
+                "bullet-seed",
+                "block",
+                "frenzy-plant",
+                "magical-leaf",
+                "natural-gift",
+                "worry-seed",
+                "poison-jab",
+                "seed-bomb",
+                "energy-ball",
+                "earth-power",
+                "giga-impact",
+                "rock-climb",
+                "leaf-storm",
+                "power-whip",
+                "captivate",
+                "grass-knot",
+                "venoshock",
+                "acid-spray",
+                "round",
+                "echoed-voice",
+                "grass-pledge",
+                "bulldoze",
+                "work-up",
+                "petal-blizzard",
+                "grassy-terrain",
+                "confide",
+                "stomping-tantrum",
+                "grassy-glide",
+                "terrain-pulse",
+                "tera-blast",
+                "trailblaze"
+            ],
+            "evolvesInto": [],
+            "evolvesFrom": "ivysaur",
+            "modes": [
+                {
+                    "modeName": "venusaur",
+                    "isDefault": true,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+                    "types": [
+                        "grass",
+                        "poison"
+                    ],
+                    "baseStats": {
+                        "hp": 80,
+                        "attack": 82,
+                        "defense": 83,
+                        "specialAttack": 100,
+                        "specialDefense": 100,
+                        "speed": 80
+                    },
+                    "abilities": [
+                        "overgrow",
+                        "chlorophyll"
+                    ]
+                },
+                {
+                    "modeName": "venusaur-mega",
+                    "isDefault": false,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10033.png",
+                    "types": [
+                        "grass",
+                        "poison"
+                    ],
+                    "baseStats": {
+                        "hp": 80,
+                        "attack": 100,
+                        "defense": 123,
+                        "specialAttack": 122,
+                        "specialDefense": 120,
+                        "speed": 80
+                    },
+                    "abilities": [
+                        "thick-fat"
+                    ]
+                },
+                {
+                    "modeName": "venusaur-gmax",
+                    "isDefault": false,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10195.png",
+                    "types": [
+                        "grass",
+                        "poison"
+                    ],
+                    "baseStats": {
+                        "hp": 80,
+                        "attack": 82,
+                        "defense": 83,
+                        "specialAttack": 100,
+                        "specialDefense": 100,
+                        "speed": 80
+                    },
+                    "abilities": [
+                        "overgrow",
+                        "chlorophyll"
+                    ]
+                }
+            ]
+        }
+    ]
+}

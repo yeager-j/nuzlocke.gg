@@ -1,0 +1,42 @@
+{
+    "name": "Caterpie",
+    "nationalDexNumber": 10,
+    "forms": [
+        {
+            "formName": "caterpie",
+            "movePool": [
+                "tackle",
+                "string-shot",
+                "snore",
+                "bug-bite",
+                "electroweb"
+            ],
+            "evolvesInto": [
+                "metapod"
+            ],
+            "evolvesFrom": "",
+            "modes": [
+                {
+                    "modeName": "caterpie",
+                    "isDefault": true,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
+                    "types": [
+                        "bug"
+                    ],
+                    "baseStats": {
+                        "hp": 45,
+                        "attack": 30,
+                        "defense": 35,
+                        "specialAttack": 20,
+                        "specialDefense": 20,
+                        "speed": 45
+                    },
+                    "abilities": [
+                        "shield-dust",
+                        "run-away"
+                    ]
+                }
+            ]
+        }
+    ]
+}

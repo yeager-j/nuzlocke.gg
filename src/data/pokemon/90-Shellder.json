@@ -1,0 +1,113 @@
+{
+    "name": "Shellder",
+    "nationalDexNumber": 90,
+    "forms": [
+        {
+            "formName": "shellder",
+            "movePool": [
+                "headbutt",
+                "tackle",
+                "take-down",
+                "double-edge",
+                "twineedle",
+                "leer",
+                "supersonic",
+                "water-gun",
+                "hydro-pump",
+                "surf",
+                "ice-beam",
+                "blizzard",
+                "bubble-beam",
+                "aurora-beam",
+                "toxic",
+                "rage",
+                "teleport",
+                "mimic",
+                "screech",
+                "double-team",
+                "withdraw",
+                "barrier",
+                "reflect",
+                "bide",
+                "self-destruct",
+                "waterfall",
+                "clamp",
+                "swift",
+                "explosion",
+                "rest",
+                "tri-attack",
+                "substitute",
+                "snore",
+                "curse",
+                "protect",
+                "spikes",
+                "icy-wind",
+                "endure",
+                "swagger",
+                "attract",
+                "sleep-talk",
+                "return",
+                "frustration",
+                "rapid-spin",
+                "hidden-power",
+                "rain-dance",
+                "whirlpool",
+                "hail",
+                "facade",
+                "helping-hand",
+                "secret-power",
+                "dive",
+                "icicle-spear",
+                "iron-defense",
+                "mud-shot",
+                "rock-blast",
+                "water-pulse",
+                "brine",
+                "natural-gift",
+                "payback",
+                "toxic-spikes",
+                "aqua-ring",
+                "avalanche",
+                "ice-shard",
+                "captivate",
+                "round",
+                "shell-smash",
+                "razor-shell",
+                "confide",
+                "liquidation",
+                "life-dew",
+                "tera-blast",
+                "ice-spinner",
+                "snowscape",
+                "chilling-water"
+            ],
+            "evolvesInto": [
+                "cloyster"
+            ],
+            "evolvesFrom": "",
+            "modes": [
+                {
+                    "modeName": "shellder",
+                    "isDefault": true,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png",
+                    "types": [
+                        "water"
+                    ],
+                    "baseStats": {
+                        "hp": 30,
+                        "attack": 65,
+                        "defense": 100,
+                        "specialAttack": 45,
+                        "specialDefense": 25,
+                        "speed": 40
+                    },
+                    "abilities": [
+                        "shell-armor",
+                        "skill-link",
+                        "overcoat"
+                    ]
+                }
+            ]
+        }
+    ]
+}

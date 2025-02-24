@@ -1,0 +1,183 @@
+{
+    "name": "Ponyta",
+    "nationalDexNumber": 77,
+    "forms": [
+        {
+            "formName": "ponyta",
+            "movePool": [
+                "stomp",
+                "double-kick",
+                "headbutt",
+                "horn-drill",
+                "tackle",
+                "body-slam",
+                "take-down",
+                "thrash",
+                "double-edge",
+                "tail-whip",
+                "growl",
+                "ember",
+                "flamethrower",
+                "low-kick",
+                "strength",
+                "solar-beam",
+                "fire-spin",
+                "toxic",
+                "hypnosis",
+                "agility",
+                "quick-attack",
+                "rage",
+                "mimic",
+                "double-team",
+                "reflect",
+                "bide",
+                "fire-blast",
+                "swift",
+                "skull-bash",
+                "rest",
+                "substitute",
+                "flame-wheel",
+                "snore",
+                "curse",
+                "protect",
+                "endure",
+                "charm",
+                "swagger",
+                "attract",
+                "sleep-talk",
+                "return",
+                "frustration",
+                "iron-tail",
+                "morning-sun",
+                "hidden-power",
+                "sunny-day",
+                "heat-wave",
+                "will-o-wisp",
+                "facade",
+                "secret-power",
+                "overheat",
+                "bounce",
+                "natural-gift",
+                "flare-blitz",
+                "captivate",
+                "double-hit",
+                "flame-charge",
+                "round",
+                "echoed-voice",
+                "ally-switch",
+                "incinerate",
+                "inferno",
+                "wild-charge",
+                "play-rough",
+                "confide",
+                "mystical-fire",
+                "high-horsepower",
+                "solar-blade"
+            ],
+            "evolvesInto": [
+                "rapidash"
+            ],
+            "evolvesFrom": "",
+            "modes": [
+                {
+                    "modeName": "ponyta",
+                    "isDefault": true,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
+                    "types": [
+                        "fire"
+                    ],
+                    "baseStats": {
+                        "hp": 50,
+                        "attack": 85,
+                        "defense": 55,
+                        "specialAttack": 65,
+                        "specialDefense": 65,
+                        "speed": 90
+                    },
+                    "abilities": [
+                        "run-away",
+                        "flash-fire",
+                        "flame-body"
+                    ]
+                }
+            ]
+        },
+        {
+            "formName": "ponyta-galar",
+            "movePool": [
+                "stomp",
+                "double-kick",
+                "horn-drill",
+                "tackle",
+                "body-slam",
+                "take-down",
+                "thrash",
+                "double-edge",
+                "tail-whip",
+                "growl",
+                "psybeam",
+                "low-kick",
+                "confusion",
+                "psychic",
+                "hypnosis",
+                "agility",
+                "swift",
+                "rest",
+                "substitute",
+                "snore",
+                "protect",
+                "endure",
+                "charm",
+                "attract",
+                "sleep-talk",
+                "iron-tail",
+                "morning-sun",
+                "future-sight",
+                "facade",
+                "imprison",
+                "bounce",
+                "calm-mind",
+                "healing-wish",
+                "zen-headbutt",
+                "round",
+                "stored-power",
+                "ally-switch",
+                "heal-pulse",
+                "wild-charge",
+                "play-rough",
+                "fairy-wind",
+                "mystical-fire",
+                "dazzling-gleam",
+                "high-horsepower",
+                "expanding-force"
+            ],
+            "evolvesInto": [
+                "rapidash"
+            ],
+            "evolvesFrom": "",
+            "modes": [
+                {
+                    "modeName": "ponyta-galar",
+                    "isDefault": false,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10162.png",
+                    "types": [
+                        "psychic"
+                    ],
+                    "baseStats": {
+                        "hp": 50,
+                        "attack": 85,
+                        "defense": 55,
+                        "specialAttack": 65,
+                        "specialDefense": 65,
+                        "speed": 90
+                    },
+                    "abilities": [
+                        "run-away",
+                        "pastel-veil",
+                        "anticipation"
+                    ]
+                }
+            ]
+        }
+    ]
+}

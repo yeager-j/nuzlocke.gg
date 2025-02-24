@@ -1,0 +1,142 @@
+{
+    "name": "Kingler",
+    "nationalDexNumber": 99,
+    "forms": [
+        {
+            "formName": "kingler",
+            "movePool": [
+                "vice-grip",
+                "guillotine",
+                "swords-dance",
+                "cut",
+                "slam",
+                "stomp",
+                "headbutt",
+                "body-slam",
+                "take-down",
+                "double-edge",
+                "leer",
+                "water-gun",
+                "hydro-pump",
+                "surf",
+                "ice-beam",
+                "blizzard",
+                "bubble-beam",
+                "hyper-beam",
+                "strength",
+                "dig",
+                "toxic",
+                "agility",
+                "rage",
+                "mimic",
+                "double-team",
+                "harden",
+                "bide",
+                "amnesia",
+                "bubble",
+                "crabhammer",
+                "rest",
+                "rock-slide",
+                "substitute",
+                "thief",
+                "snore",
+                "curse",
+                "flail",
+                "protect",
+                "mud-slap",
+                "icy-wind",
+                "endure",
+                "false-swipe",
+                "swagger",
+                "fury-cutter",
+                "attract",
+                "sleep-talk",
+                "return",
+                "frustration",
+                "metal-claw",
+                "hidden-power",
+                "rain-dance",
+                "ancient-power",
+                "rock-smash",
+                "whirlpool",
+                "hail",
+                "facade",
+                "superpower",
+                "brick-break",
+                "knock-off",
+                "secret-power",
+                "dive",
+                "mud-sport",
+                "rock-tomb",
+                "iron-defense",
+                "mud-shot",
+                "water-pulse",
+                "hammer-arm",
+                "brine",
+                "natural-gift",
+                "fling",
+                "x-scissor",
+                "giga-impact",
+                "captivate",
+                "hone-claws",
+                "wide-guard",
+                "round",
+                "ally-switch",
+                "scald",
+                "quash",
+                "razor-shell",
+                "confide",
+                "high-horsepower",
+                "brutal-swing",
+                "stomping-tantrum",
+                "liquidation"
+            ],
+            "evolvesInto": [],
+            "evolvesFrom": "krabby",
+            "modes": [
+                {
+                    "modeName": "kingler",
+                    "isDefault": true,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png",
+                    "types": [
+                        "water"
+                    ],
+                    "baseStats": {
+                        "hp": 55,
+                        "attack": 130,
+                        "defense": 115,
+                        "specialAttack": 50,
+                        "specialDefense": 50,
+                        "speed": 75
+                    },
+                    "abilities": [
+                        "hyper-cutter",
+                        "shell-armor",
+                        "sheer-force"
+                    ]
+                },
+                {
+                    "modeName": "kingler-gmax",
+                    "isDefault": false,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10203.png",
+                    "types": [
+                        "water"
+                    ],
+                    "baseStats": {
+                        "hp": 55,
+                        "attack": 130,
+                        "defense": 115,
+                        "specialAttack": 50,
+                        "specialDefense": 50,
+                        "speed": 75
+                    },
+                    "abilities": [
+                        "hyper-cutter",
+                        "shell-armor",
+                        "sheer-force"
+                    ]
+                }
+            ]
+        }
+    ]
+}

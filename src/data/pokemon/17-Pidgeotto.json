@@ -1,0 +1,99 @@
+{
+    "name": "Pidgeotto",
+    "nationalDexNumber": 17,
+    "forms": [
+        {
+            "formName": "pidgeotto",
+            "movePool": [
+                "razor-wind",
+                "gust",
+                "wing-attack",
+                "whirlwind",
+                "fly",
+                "sand-attack",
+                "headbutt",
+                "tackle",
+                "take-down",
+                "double-edge",
+                "toxic",
+                "agility",
+                "quick-attack",
+                "rage",
+                "mimic",
+                "double-team",
+                "reflect",
+                "bide",
+                "mirror-move",
+                "swift",
+                "sky-attack",
+                "rest",
+                "substitute",
+                "thief",
+                "snore",
+                "curse",
+                "protect",
+                "mud-slap",
+                "detect",
+                "endure",
+                "swagger",
+                "steel-wing",
+                "attract",
+                "sleep-talk",
+                "return",
+                "frustration",
+                "hidden-power",
+                "twister",
+                "rain-dance",
+                "sunny-day",
+                "uproar",
+                "heat-wave",
+                "facade",
+                "secret-power",
+                "feather-dance",
+                "air-cutter",
+                "aerial-ace",
+                "roost",
+                "natural-gift",
+                "pluck",
+                "tailwind",
+                "u-turn",
+                "air-slash",
+                "defog",
+                "captivate",
+                "ominous-wind",
+                "round",
+                "work-up",
+                "hurricane",
+                "confide"
+            ],
+            "evolvesInto": [
+                "pidgeot"
+            ],
+            "evolvesFrom": "pidgey",
+            "modes": [
+                {
+                    "modeName": "pidgeotto",
+                    "isDefault": true,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+                    "types": [
+                        "normal",
+                        "flying"
+                    ],
+                    "baseStats": {
+                        "hp": 63,
+                        "attack": 60,
+                        "defense": 55,
+                        "specialAttack": 50,
+                        "specialDefense": 50,
+                        "speed": 71
+                    },
+                    "abilities": [
+                        "keen-eye",
+                        "tangled-feet",
+                        "big-pecks"
+                    ]
+                }
+            ]
+        }
+    ]
+}

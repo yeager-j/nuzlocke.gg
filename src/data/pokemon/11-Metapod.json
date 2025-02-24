@@ -1,0 +1,41 @@
+{
+    "name": "Metapod",
+    "nationalDexNumber": 11,
+    "forms": [
+        {
+            "formName": "metapod",
+            "movePool": [
+                "string-shot",
+                "harden",
+                "iron-defense",
+                "bug-bite",
+                "electroweb"
+            ],
+            "evolvesInto": [
+                "butterfree"
+            ],
+            "evolvesFrom": "caterpie",
+            "modes": [
+                {
+                    "modeName": "metapod",
+                    "isDefault": true,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
+                    "types": [
+                        "bug"
+                    ],
+                    "baseStats": {
+                        "hp": 50,
+                        "attack": 20,
+                        "defense": 55,
+                        "specialAttack": 25,
+                        "specialDefense": 25,
+                        "speed": 30
+                    },
+                    "abilities": [
+                        "shed-skin"
+                    ]
+                }
+            ]
+        }
+    ]
+}

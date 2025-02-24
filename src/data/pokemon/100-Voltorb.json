@@ -1,0 +1,188 @@
+{
+    "name": "Voltorb",
+    "nationalDexNumber": 100,
+    "forms": [
+        {
+            "formName": "voltorb",
+            "movePool": [
+                "headbutt",
+                "tackle",
+                "take-down",
+                "double-edge",
+                "sonic-boom",
+                "thunder-shock",
+                "thunderbolt",
+                "thunder-wave",
+                "thunder",
+                "toxic",
+                "agility",
+                "rage",
+                "teleport",
+                "mimic",
+                "screech",
+                "double-team",
+                "light-screen",
+                "reflect",
+                "bide",
+                "self-destruct",
+                "swift",
+                "flash",
+                "explosion",
+                "rest",
+                "substitute",
+                "thief",
+                "snore",
+                "curse",
+                "protect",
+                "zap-cannon",
+                "endure",
+                "rollout",
+                "swagger",
+                "spark",
+                "sleep-talk",
+                "return",
+                "frustration",
+                "hidden-power",
+                "rain-dance",
+                "mirror-coat",
+                "torment",
+                "facade",
+                "charge",
+                "taunt",
+                "helping-hand",
+                "magic-coat",
+                "recycle",
+                "secret-power",
+                "metal-sound",
+                "signal-beam",
+                "shock-wave",
+                "gyro-ball",
+                "natural-gift",
+                "sucker-punch",
+                "magnet-rise",
+                "discharge",
+                "charge-beam",
+                "electro-ball",
+                "foul-play",
+                "round",
+                "volt-switch",
+                "electroweb",
+                "wild-charge",
+                "confide",
+                "eerie-impulse",
+                "electric-terrain",
+                "tera-blast"
+            ],
+            "evolvesInto": [
+                "electrode"
+            ],
+            "evolvesFrom": "",
+            "modes": [
+                {
+                    "modeName": "voltorb",
+                    "isDefault": true,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png",
+                    "types": [
+                        "electric"
+                    ],
+                    "baseStats": {
+                        "hp": 40,
+                        "attack": 30,
+                        "defense": 50,
+                        "specialAttack": 55,
+                        "specialDefense": 55,
+                        "speed": 100
+                    },
+                    "abilities": [
+                        "soundproof",
+                        "static",
+                        "aftermath"
+                    ]
+                }
+            ]
+        },
+        {
+            "formName": "voltorb-hisui",
+            "movePool": [
+                "tackle",
+                "take-down",
+                "double-edge",
+                "leech-seed",
+                "solar-beam",
+                "stun-spore",
+                "thunder-shock",
+                "thunderbolt",
+                "thunder-wave",
+                "thunder",
+                "agility",
+                "screech",
+                "reflect",
+                "self-destruct",
+                "swift",
+                "explosion",
+                "rest",
+                "substitute",
+                "thief",
+                "protect",
+                "giga-drain",
+                "endure",
+                "rollout",
+                "spark",
+                "sleep-talk",
+                "rain-dance",
+                "facade",
+                "charge",
+                "taunt",
+                "recycle",
+                "ice-ball",
+                "bullet-seed",
+                "magical-leaf",
+                "gyro-ball",
+                "worry-seed",
+                "seed-bomb",
+                "energy-ball",
+                "discharge",
+                "leaf-storm",
+                "grass-knot",
+                "charge-beam",
+                "electro-ball",
+                "foul-play",
+                "volt-switch",
+                "electroweb",
+                "wild-charge",
+                "grassy-terrain",
+                "electric-terrain",
+                "grassy-glide",
+                "tera-blast"
+            ],
+            "evolvesInto": [
+                "electrode"
+            ],
+            "evolvesFrom": "",
+            "modes": [
+                {
+                    "modeName": "voltorb-hisui",
+                    "isDefault": false,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10231.png",
+                    "types": [
+                        "electric",
+                        "grass"
+                    ],
+                    "baseStats": {
+                        "hp": 40,
+                        "attack": 30,
+                        "defense": 50,
+                        "specialAttack": 55,
+                        "specialDefense": 55,
+                        "speed": 100
+                    },
+                    "abilities": [
+                        "soundproof",
+                        "static",
+                        "aftermath"
+                    ]
+                }
+            ]
+        }
+    ]
+}

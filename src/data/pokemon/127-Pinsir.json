@@ -1,0 +1,141 @@
+{
+    "name": "Pinsir",
+    "nationalDexNumber": 127,
+    "forms": [
+        {
+            "formName": "pinsir",
+            "movePool": [
+                "vice-grip",
+                "guillotine",
+                "swords-dance",
+                "cut",
+                "bind",
+                "headbutt",
+                "fury-attack",
+                "body-slam",
+                "take-down",
+                "thrash",
+                "double-edge",
+                "hyper-beam",
+                "submission",
+                "seismic-toss",
+                "strength",
+                "string-shot",
+                "earthquake",
+                "dig",
+                "toxic",
+                "quick-attack",
+                "rage",
+                "mimic",
+                "double-team",
+                "harden",
+                "focus-energy",
+                "bide",
+                "rest",
+                "rock-slide",
+                "slash",
+                "substitute",
+                "thief",
+                "snore",
+                "curse",
+                "flail",
+                "reversal",
+                "protect",
+                "feint-attack",
+                "outrage",
+                "endure",
+                "false-swipe",
+                "swagger",
+                "fury-cutter",
+                "attract",
+                "sleep-talk",
+                "return",
+                "frustration",
+                "vital-throw",
+                "hidden-power",
+                "rain-dance",
+                "sunny-day",
+                "rock-smash",
+                "facade",
+                "focus-punch",
+                "helping-hand",
+                "superpower",
+                "revenge",
+                "brick-break",
+                "knock-off",
+                "secret-power",
+                "rock-tomb",
+                "iron-defense",
+                "bulk-up",
+                "natural-gift",
+                "feint",
+                "close-combat",
+                "fling",
+                "me-first",
+                "x-scissor",
+                "focus-blast",
+                "giga-impact",
+                "rock-climb",
+                "stone-edge",
+                "captivate",
+                "stealth-rock",
+                "bug-bite",
+                "double-hit",
+                "smack-down",
+                "storm-throw",
+                "round",
+                "struggle-bug",
+                "bulldoze",
+                "confide",
+                "high-horsepower",
+                "throat-chop",
+                "brutal-swing"
+            ],
+            "evolvesInto": [],
+            "evolvesFrom": "",
+            "modes": [
+                {
+                    "modeName": "pinsir",
+                    "isDefault": true,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png",
+                    "types": [
+                        "bug"
+                    ],
+                    "baseStats": {
+                        "hp": 65,
+                        "attack": 125,
+                        "defense": 100,
+                        "specialAttack": 55,
+                        "specialDefense": 70,
+                        "speed": 85
+                    },
+                    "abilities": [
+                        "hyper-cutter",
+                        "mold-breaker",
+                        "moxie"
+                    ]
+                },
+                {
+                    "modeName": "pinsir-mega",
+                    "isDefault": false,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10040.png",
+                    "types": [
+                        "bug",
+                        "flying"
+                    ],
+                    "baseStats": {
+                        "hp": 65,
+                        "attack": 155,
+                        "defense": 120,
+                        "specialAttack": 65,
+                        "specialDefense": 90,
+                        "speed": 105
+                    },
+                    "abilities": [
+                        "aerilate"
+                    ]
+                }
+            ]
+        }
+    ]
+}

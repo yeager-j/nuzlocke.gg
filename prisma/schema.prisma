@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Species {
+  id                Int    @id @default(autoincrement())
+  nationalDexNumber Int    @unique
+  name              String @unique
+  forms             Form[]
+}
+
+model Form {
+  id        Int    @id @default(autoincrement())
+  speciesId Int
+  formName  String @unique
+  movePool  String
+
+  // Evolution relation using formName as the key.
+  evolvesFromFormName String? // Optional foreign key referencing formName.
+  evolvesFrom         Form?   @relation("Evolution", fields: [evolvesFromFormName], references: [formName])
+  evolvesInto         Form[]  @relation("Evolution") // All forms that evolve from this one.
+
+  species Species @relation(fields: [speciesId], references: [id])
+  modes   Mode[]
+}
+
+model Mode {
+  id        Int     @id @default(autoincrement())
+  formName  String
+  modeName  String  @unique
+  sprite    String
+  isDefault Boolean
+  types     String // JSON array of PokemonType[]
+  baseStats String // JSON object of Stats
+  abilities String // JSON array of ability names
+
+  form Form @relation(fields: [formName], references: [formName])
+}

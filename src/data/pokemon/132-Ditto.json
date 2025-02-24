@@ -1,0 +1,36 @@
+{
+    "name": "Ditto",
+    "nationalDexNumber": 132,
+    "forms": [
+        {
+            "formName": "ditto",
+            "movePool": [
+                "transform"
+            ],
+            "evolvesInto": [],
+            "evolvesFrom": "",
+            "modes": [
+                {
+                    "modeName": "ditto",
+                    "isDefault": true,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
+                    "types": [
+                        "normal"
+                    ],
+                    "baseStats": {
+                        "hp": 48,
+                        "attack": 48,
+                        "defense": 48,
+                        "specialAttack": 48,
+                        "specialDefense": 48,
+                        "speed": 48
+                    },
+                    "abilities": [
+                        "limber",
+                        "imposter"
+                    ]
+                }
+            ]
+        }
+    ]
+}

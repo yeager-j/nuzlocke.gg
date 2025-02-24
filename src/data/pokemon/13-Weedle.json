@@ -1,0 +1,42 @@
+{
+    "name": "Weedle",
+    "nationalDexNumber": 13,
+    "forms": [
+        {
+            "formName": "weedle",
+            "movePool": [
+                "poison-sting",
+                "string-shot",
+                "bug-bite",
+                "electroweb"
+            ],
+            "evolvesInto": [
+                "kakuna"
+            ],
+            "evolvesFrom": "",
+            "modes": [
+                {
+                    "modeName": "weedle",
+                    "isDefault": true,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png",
+                    "types": [
+                        "bug",
+                        "poison"
+                    ],
+                    "baseStats": {
+                        "hp": 40,
+                        "attack": 35,
+                        "defense": 30,
+                        "specialAttack": 20,
+                        "specialDefense": 20,
+                        "speed": 50
+                    },
+                    "abilities": [
+                        "shield-dust",
+                        "run-away"
+                    ]
+                }
+            ]
+        }
+    ]
+}

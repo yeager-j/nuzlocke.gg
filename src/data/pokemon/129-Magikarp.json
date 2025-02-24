@@ -1,0 +1,42 @@
+{
+    "name": "Magikarp",
+    "nationalDexNumber": 129,
+    "forms": [
+        {
+            "formName": "magikarp",
+            "movePool": [
+                "tackle",
+                "hydro-pump",
+                "splash",
+                "flail",
+                "bounce"
+            ],
+            "evolvesInto": [
+                "gyarados"
+            ],
+            "evolvesFrom": "",
+            "modes": [
+                {
+                    "modeName": "magikarp",
+                    "isDefault": true,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
+                    "types": [
+                        "water"
+                    ],
+                    "baseStats": {
+                        "hp": 20,
+                        "attack": 10,
+                        "defense": 55,
+                        "specialAttack": 15,
+                        "specialDefense": 20,
+                        "speed": 80
+                    },
+                    "abilities": [
+                        "swift-swim",
+                        "rattled"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,120 @@
+{
+    "name": "Pidgeot",
+    "nationalDexNumber": 18,
+    "forms": [
+        {
+            "formName": "pidgeot",
+            "movePool": [
+                "razor-wind",
+                "gust",
+                "wing-attack",
+                "whirlwind",
+                "fly",
+                "sand-attack",
+                "headbutt",
+                "tackle",
+                "take-down",
+                "double-edge",
+                "hyper-beam",
+                "toxic",
+                "agility",
+                "quick-attack",
+                "rage",
+                "mimic",
+                "double-team",
+                "reflect",
+                "bide",
+                "mirror-move",
+                "swift",
+                "sky-attack",
+                "rest",
+                "substitute",
+                "thief",
+                "snore",
+                "curse",
+                "protect",
+                "mud-slap",
+                "detect",
+                "endure",
+                "swagger",
+                "steel-wing",
+                "attract",
+                "sleep-talk",
+                "return",
+                "frustration",
+                "hidden-power",
+                "twister",
+                "rain-dance",
+                "sunny-day",
+                "uproar",
+                "heat-wave",
+                "facade",
+                "secret-power",
+                "feather-dance",
+                "air-cutter",
+                "aerial-ace",
+                "roost",
+                "natural-gift",
+                "pluck",
+                "tailwind",
+                "u-turn",
+                "air-slash",
+                "giga-impact",
+                "defog",
+                "captivate",
+                "ominous-wind",
+                "round",
+                "work-up",
+                "hurricane",
+                "confide",
+                "laser-focus"
+            ],
+            "evolvesInto": [],
+            "evolvesFrom": "pidgeotto",
+            "modes": [
+                {
+                    "modeName": "pidgeot",
+                    "isDefault": true,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
+                    "types": [
+                        "normal",
+                        "flying"
+                    ],
+                    "baseStats": {
+                        "hp": 83,
+                        "attack": 80,
+                        "defense": 75,
+                        "specialAttack": 70,
+                        "specialDefense": 70,
+                        "speed": 101
+                    },
+                    "abilities": [
+                        "keen-eye",
+                        "tangled-feet",
+                        "big-pecks"
+                    ]
+                },
+                {
+                    "modeName": "pidgeot-mega",
+                    "isDefault": false,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10073.png",
+                    "types": [
+                        "normal",
+                        "flying"
+                    ],
+                    "baseStats": {
+                        "hp": 83,
+                        "attack": 80,
+                        "defense": 80,
+                        "specialAttack": 135,
+                        "specialDefense": 80,
+                        "speed": 121
+                    },
+                    "abilities": [
+                        "no-guard"
+                    ]
+                }
+            ]
+        }
+    ]
+}

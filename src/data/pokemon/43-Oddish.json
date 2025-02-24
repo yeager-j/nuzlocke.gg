@@ -1,0 +1,112 @@
+{
+    "name": "Oddish",
+    "nationalDexNumber": 43,
+    "forms": [
+        {
+            "formName": "oddish",
+            "movePool": [
+                "swords-dance",
+                "cut",
+                "headbutt",
+                "take-down",
+                "double-edge",
+                "acid",
+                "absorb",
+                "mega-drain",
+                "leech-seed",
+                "growth",
+                "razor-leaf",
+                "solar-beam",
+                "poison-powder",
+                "stun-spore",
+                "sleep-powder",
+                "petal-dance",
+                "toxic",
+                "rage",
+                "mimic",
+                "double-team",
+                "reflect",
+                "bide",
+                "flash",
+                "rest",
+                "substitute",
+                "snore",
+                "curse",
+                "flail",
+                "protect",
+                "sludge-bomb",
+                "giga-drain",
+                "endure",
+                "charm",
+                "swagger",
+                "attract",
+                "sleep-talk",
+                "return",
+                "frustration",
+                "sweet-scent",
+                "synthesis",
+                "moonlight",
+                "hidden-power",
+                "sunny-day",
+                "facade",
+                "nature-power",
+                "helping-hand",
+                "ingrain",
+                "secret-power",
+                "teeter-dance",
+                "tickle",
+                "bullet-seed",
+                "magical-leaf",
+                "natural-gift",
+                "gastro-acid",
+                "lucky-chant",
+                "worry-seed",
+                "seed-bomb",
+                "energy-ball",
+                "leaf-storm",
+                "captivate",
+                "grass-knot",
+                "venoshock",
+                "acid-spray",
+                "after-you",
+                "round",
+                "grassy-terrain",
+                "moonblast",
+                "confide",
+                "dazzling-gleam",
+                "infestation",
+                "strength-sap",
+                "grassy-glide",
+                "tera-blast",
+                "trailblaze"
+            ],
+            "evolvesInto": [
+                "gloom"
+            ],
+            "evolvesFrom": "",
+            "modes": [
+                {
+                    "modeName": "oddish",
+                    "isDefault": true,
+                    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png",
+                    "types": [
+                        "grass",
+                        "poison"
+                    ],
+                    "baseStats": {
+                        "hp": 45,
+                        "attack": 50,
+                        "defense": 55,
+                        "specialAttack": 75,
+                        "specialDefense": 65,
+                        "speed": 30
+                    },
+                    "abilities": [
+                        "chlorophyll",
+                        "run-away"
+                    ]
+                }
+            ]
+        }
+    ]
+}
