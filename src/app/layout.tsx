@@ -4,6 +4,7 @@ import { Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "@components/theme-provider";
+import { Toaster } from "@components/ui/sonner";
 
 const geistSans = Space_Grotesk({
   variable: "--font-sans",
@@ -36,7 +37,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main className="max-w-screen-lg mx-auto min-h-svh p-8 flex md:mt-48">
+            {children}
+
+            <Toaster />
+          </main>
         </ThemeProvider>
       </body>
     </html>
