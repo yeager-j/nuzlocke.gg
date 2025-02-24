@@ -71,6 +71,9 @@ importers:
       pokedex-promise-v2:
         specifier: ^4.2.1
         version: 4.2.1
+      prisma:
+        specifier: ^6.4.1
+        version: 6.4.1(typescript@5.7.3)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -135,9 +138,6 @@ importers:
       prettier:
         specifier: ^3.5.1
         version: 3.5.1
-      prisma:
-        specifier: ^6.4.1
-        version: 6.4.1(typescript@5.7.3)
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.17
