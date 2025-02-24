@@ -31,7 +31,7 @@ function getEvolutionTargets(
       return node.evolves_to.map((child) => child.species.name);
     }
     // Otherwise, search each branch recursively.
-    for (let child of node.evolves_to) {
+    for (const child of node.evolves_to) {
       const result = search(child);
       if (result.length > 0) {
         return result;
