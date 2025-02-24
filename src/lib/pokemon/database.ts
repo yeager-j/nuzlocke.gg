@@ -25,7 +25,7 @@ export async function seedInitialPokemonData(
     const pokemon = await getPokemonFromFile(pokemonName);
 
     // Upsert species
-    await prisma.species.upsert({
+    const insertedPokemon = await prisma.species.upsert({
       where: { nationalDexNumber: pokemon.nationalDexNumber },
       update: {},
       create: {
@@ -39,7 +39,7 @@ export async function seedInitialPokemonData(
       // Create form without the evolution relation.
       const savedForm = await prisma.form.create({
         data: {
-          speciesId: pokemon.nationalDexNumber,
+          speciesId: insertedPokemon.id,
           formName: form.formName,
           movePool: JSON.stringify(form.movePool),
           // Skip evolving relation here.
@@ -138,6 +138,14 @@ async function getPokemonFromFile(
  * @return {Promise<void>} A promise that resolves when the database seeding and evolution updates are completed.
  */
 export async function seedDatabase(): Promise<void> {
+  console.log("Seeding database...");
+
+  await prisma.mode.deleteMany({});
+  await prisma.form.deleteMany({});
+  await prisma.species.deleteMany({});
+
+  console.log("Deleted all data.");
+
   const pokemonList = await fs.readdir(path.join(DATA_PATH, "pokemon"));
 
   // I can't even begin to fathom why this only works when you seed them in National Dex order
