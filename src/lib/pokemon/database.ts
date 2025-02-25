@@ -1,11 +1,16 @@
 import fs from "fs/promises";
 import path from "path";
-import { PrismaClient } from "@prisma/client";
+import { eq } from "drizzle-orm";
 
-import { PokemonSpecies } from "@lib/pokemon/types";
-import { DATA_PATH } from "@lib/pokemon/utils";
-
-const prisma = new PrismaClient();
+import { db } from "@/db";
+import {
+  evolutionsTable,
+  formsTable,
+  modesTable,
+  speciesTable,
+} from "@/db/schema";
+import { PokemonSpecies } from "@/lib/pokemon/types";
+import { DATA_PATH } from "@/lib/pokemon/utils";
 
 /**
  * Seeds initial Pokémon data into the database using provided Pokémon names and additional data.
@@ -25,26 +30,27 @@ export async function seedInitialPokemonData(
     const pokemon = await getPokemonFromFile(pokemonName);
 
     // Upsert species
-    const insertedPokemon = await prisma.species.upsert({
-      where: { nationalDexNumber: pokemon.nationalDexNumber },
-      update: {},
-      create: {
+    const [insertedPokemon] = await db
+      .insert(speciesTable)
+      .values({
         nationalDexNumber: pokemon.nationalDexNumber,
         name: pokemon.name,
-      },
-    });
+      })
+      .returning()
+      .onConflictDoNothing();
 
     for (const form of pokemon.forms) {
       console.log(`Seeding ${pokemon.name} form ${form.formName}...`);
       // Create form without the evolution relation.
-      const savedForm = await prisma.form.create({
-        data: {
+      const [savedForm] = await db
+        .insert(formsTable)
+        .values({
           speciesId: insertedPokemon.id,
           formName: form.formName,
           movePool: JSON.stringify(form.movePool),
           // Skip evolving relation here.
-        },
-      });
+        })
+        .returning();
 
       // Collect evolution info for the second phase.
       if (form.evolvesFrom) {
@@ -57,19 +63,21 @@ export async function seedInitialPokemonData(
 
       // Create associated modes.
       for (const mode of form.modes) {
+        const [primaryType, secondaryType] = mode.types;
+
         console.log(
           `Seeding ${pokemonName} form ${form.formName} mode ${mode.modeName}...`,
         );
-        await prisma.mode.create({
-          data: {
-            formName: savedForm.formName, // or use formId: savedForm.id if preferred
-            modeName: mode.modeName,
-            sprite: mode.sprite,
-            isDefault: mode.isDefault,
-            types: JSON.stringify(mode.types),
-            baseStats: JSON.stringify(mode.baseStats),
-            abilities: JSON.stringify(mode.abilities),
-          },
+
+        await db.insert(modesTable).values({
+          formId: savedForm.id,
+          modeName: mode.modeName,
+          sprite: mode.sprite,
+          isDefault: mode.isDefault,
+          primaryType: primaryType,
+          secondaryType: secondaryType,
+          baseStats: JSON.stringify(mode.baseStats),
+          abilities: JSON.stringify(mode.abilities),
         });
       }
     }
@@ -94,8 +102,8 @@ export async function updateEvolutionRelations(
       console.log(`Updating ${formName} evolves from ${evolvesFrom}...`);
 
       if (
-        !(await prisma.form.findFirst({
-          where: { formName: evolvesFrom },
+        !(await db.query.formsTable.findFirst({
+          where: eq(formsTable.formName, evolvesFrom),
         }))
       ) {
         console.warn(
@@ -104,11 +112,9 @@ export async function updateEvolutionRelations(
         continue;
       }
 
-      await prisma.form.update({
-        where: { formName },
-        data: {
-          evolvesFromFormName: evolvesFrom,
-        },
+      await db.insert(evolutionsTable).values({
+        evolvesFrom: evolvesFrom,
+        evolvesTo: formName,
       });
     }
   }
@@ -140,9 +146,10 @@ async function getPokemonFromFile(
 export async function seedDatabase(): Promise<void> {
   console.log("Seeding database...");
 
-  await prisma.mode.deleteMany({});
-  await prisma.form.deleteMany({});
-  await prisma.species.deleteMany({});
+  await db.delete(speciesTable);
+  await db.delete(formsTable);
+  await db.delete(evolutionsTable);
+  await db.delete(modesTable);
 
   console.log("Deleted all data.");
 
@@ -161,3 +168,5 @@ export async function seedDatabase(): Promise<void> {
   // Phase 2: Update evolution relations once all forms exist.
   await updateEvolutionRelations(evolutionUpdates);
 }
+
+seedDatabase();

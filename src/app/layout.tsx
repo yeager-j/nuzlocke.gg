@@ -3,8 +3,8 @@ import { Geist_Mono, Space_Grotesk } from "next/font/google";
 
 import "./globals.css";
 
-import { ThemeProvider } from "@components/theme-provider";
-import { Toaster } from "@components/ui/sonner";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Space_Grotesk({
   variable: "--font-sans",

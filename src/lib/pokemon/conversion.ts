@@ -1,16 +1,15 @@
-import Pokedex, { EvolutionChain, Pokemon } from "pokedex-promise-v2";
-
 import {
   PokemonForm,
   PokemonMode,
   PokemonSpecies,
   PokemonType,
-} from "@lib/pokemon/types";
+} from "@/lib/pokemon/types";
 import {
   convertCringeStatsToBasedStats,
   isLikelyMode,
   isModeOf,
-} from "@lib/pokemon/utils";
+} from "@/lib/pokemon/utils";
+import Pokedex, { EvolutionChain, Pokemon } from "pokedex-promise-v2";
 
 /**
  * Retrieves the immediate evolution targets for a specific species from an evolution chain.

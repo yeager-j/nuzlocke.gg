@@ -1,15 +1,14 @@
-import { PrismaClient } from "@prisma/client";
 import Image from "next/image";
 
-import Paginator from "@components/paginator";
+import Paginator from "@/components/paginator";
 import {
   Card,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@components/ui/card";
-
-const client = new PrismaClient();
+} from "@/components/ui/card";
+import { db } from "@/db";
+import { speciesTable } from "@/db/schema";
 
 const PAGE_SIZE = 10;
 
@@ -20,13 +19,13 @@ export default async function Home({
 }) {
   const { page = "1" } = await searchParams;
 
-  const pokemonCount = await client.species.count();
-  const pokemon = await client.species.findMany({
-    skip: Math.max(+page - 1, 0) * PAGE_SIZE,
-    take: PAGE_SIZE,
-    include: {
+  const pokemonCount = await db.$count(speciesTable);
+  const pokemon = await db.query.speciesTable.findMany({
+    offset: Math.max(+page - 1, 0) * PAGE_SIZE,
+    limit: PAGE_SIZE,
+    with: {
       forms: {
-        include: {
+        with: {
           modes: true,
         },
       },

@@ -1,0 +1,245 @@
+{
+  "id": "a94b69a5-5bdc-47a1-89dd-fa0c182a270f",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.pkmn_evolutions": {
+      "name": "pkmn_evolutions",
+      "schema": "",
+      "columns": {
+        "evolves_from": {
+          "name": "evolves_from",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "evolves_to": {
+          "name": "evolves_to",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "pkmn_evolutions_evolves_from_pkmn_forms_form_name_fk": {
+          "name": "pkmn_evolutions_evolves_from_pkmn_forms_form_name_fk",
+          "tableFrom": "pkmn_evolutions",
+          "tableTo": "pkmn_forms",
+          "columnsFrom": [
+            "evolves_from"
+          ],
+          "columnsTo": [
+            "form_name"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "pkmn_evolutions_evolves_to_pkmn_forms_form_name_fk": {
+          "name": "pkmn_evolutions_evolves_to_pkmn_forms_form_name_fk",
+          "tableFrom": "pkmn_evolutions",
+          "tableTo": "pkmn_forms",
+          "columnsFrom": [
+            "evolves_to"
+          ],
+          "columnsTo": [
+            "form_name"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "pkmn_evolutions_evolves_from_evolves_to_pk": {
+          "name": "pkmn_evolutions_evolves_from_evolves_to_pk",
+          "columns": [
+            "evolves_from",
+            "evolves_to"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.pkmn_forms": {
+      "name": "pkmn_forms",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "species_id": {
+          "name": "species_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "form_name": {
+          "name": "form_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "move_pool": {
+          "name": "move_pool",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "pkmn_forms_form_name_unique": {
+          "name": "pkmn_forms_form_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "form_name"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.pkmn_modes": {
+      "name": "pkmn_modes",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "form_id": {
+          "name": "form_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mode_name": {
+          "name": "mode_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "sprite": {
+          "name": "sprite",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "is_default": {
+          "name": "is_default",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "primary_type": {
+          "name": "primary_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "secondary_type": {
+          "name": "secondary_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "base_stats": {
+          "name": "base_stats",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "abilities": {
+          "name": "abilities",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "pkmn_modes_mode_name_unique": {
+          "name": "pkmn_modes_mode_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "mode_name"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.pkmn_species": {
+      "name": "pkmn_species",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "national_dex_number": {
+          "name": "national_dex_number",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "pkmn_species_national_dex_number_unique": {
+          "name": "pkmn_species_national_dex_number_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "national_dex_number"
+          ]
+        },
+        "pkmn_species_name_unique": {
+          "name": "pkmn_species_name_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "name"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

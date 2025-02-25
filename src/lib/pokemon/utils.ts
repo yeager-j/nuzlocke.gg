@@ -1,7 +1,6 @@
 import path from "path";
+import { Stats } from "@/lib/pokemon/types";
 import { StatElement } from "pokedex-promise-v2";
-
-import { Stats } from "@lib/pokemon/types";
 
 export const DATA_PATH = path.join(__dirname, "../../data");
 

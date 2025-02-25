@@ -1,9 +1,8 @@
 import fs from "fs/promises";
 import path from "path";
+import { pokemonConversion } from "@/lib/pokemon/conversion";
+import { DATA_PATH, rest } from "@/lib/pokemon/utils";
 import Pokedex from "pokedex-promise-v2";
-
-import { pokemonConversion } from "@lib/pokemon/conversion";
-import { DATA_PATH, rest } from "@lib/pokemon/utils";
 
 /**
  * Downloads Pokémon data from PokeAPI, processes them, and saves each Pokémon's data as a JSON file.

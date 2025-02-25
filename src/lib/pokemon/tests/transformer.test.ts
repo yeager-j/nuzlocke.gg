@@ -1,7 +1,6 @@
+import { pokemonConversion } from "@/lib/pokemon/conversion";
 import Pokedex from "pokedex-promise-v2";
 import { describe, expect, test } from "vitest";
-
-import { pokemonConversion } from "@lib/pokemon/conversion";
 
 describe("Pokemon Transformer", () => {
   const P = new Pokedex();
