@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:deploy": "npm run db:migrate && npm run db:seed && npm run build",
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
