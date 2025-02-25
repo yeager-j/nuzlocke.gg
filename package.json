@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest",
-    "db:migrate": "pnpx drizzle-kit migrate",
+    "db:migrate": "pnpm exec drizzle-kit migrate",
     "db:seed": "tsx src/lib/pokemon/database.ts",
     "download-data": "tsx src/lib/pokemon/download.ts"
   },
