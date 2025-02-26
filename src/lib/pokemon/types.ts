@@ -1,3 +1,7 @@
+import { PokemonFormName } from "@/data/pokemon/manifest";
+import { PokemonGame } from "@/lib/pokemon/games";
+import { EncounterMethods } from "@/lib/pokemon/games/common";
+
 export type PokemonType =
   | "Normal"
   | "Fire"
@@ -60,4 +64,23 @@ export interface PokemonSpecies {
   nationalDexNumber: number;
   name: string;
   forms: PokemonForm[];
+}
+
+export interface PokemonGameData {
+  name: string;
+  pokedex: PokemonFormName[];
+  locations: GameLocation[];
+}
+
+export interface Encounter {
+  pokemonForm: PokemonFormName;
+  method: EncounterMethods;
+  versionExclusive?: PokemonGame;
+}
+
+export interface GameLocation {
+  id: string;
+  name: string;
+  order: number;
+  encounters: Encounter[];
 }

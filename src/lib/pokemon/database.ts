@@ -40,7 +40,6 @@ export async function seedInitialPokemonData(
       .onConflictDoNothing();
 
     for (const form of pokemon.forms) {
-      console.log(`Seeding ${pokemon.name} form ${form.formName}...`);
       // Create form without the evolution relation.
       const [savedForm] = await db
         .insert(formsTable)
@@ -54,7 +53,6 @@ export async function seedInitialPokemonData(
 
       // Collect evolution info for the second phase.
       if (form.evolvesFrom) {
-        console.log(`${form.formName} evolves from ${form.evolvesFrom}...`);
         formEvolutionUpdates.push({
           formName: savedForm.formName,
           evolvesFrom: form.evolvesFrom,
@@ -64,10 +62,6 @@ export async function seedInitialPokemonData(
       // Create associated modes.
       for (const mode of form.modes) {
         const [primaryType, secondaryType] = mode.types;
-
-        console.log(
-          `Seeding ${pokemonName} form ${form.formName} mode ${mode.modeName}...`,
-        );
 
         await db.insert(modesTable).values({
           formId: savedForm.id,
@@ -169,4 +163,6 @@ export async function seedDatabase(): Promise<void> {
   await updateEvolutionRelations(evolutionUpdates);
 }
 
-seedDatabase();
+seedDatabase()
+  .then(() => console.log("Database seeding complete."))
+  .catch(console.error);
