@@ -141,13 +141,15 @@ export async function seedDatabase(): Promise<void> {
   console.log("Seeding database...");
 
   await db.delete(speciesTable);
-  await db.delete(formsTable);
   await db.delete(evolutionsTable);
+  await db.delete(formsTable);
   await db.delete(modesTable);
 
   console.log("Deleted all data.");
 
-  const pokemonList = await fs.readdir(path.join(DATA_PATH, "pokemon"));
+  const pokemonList = (
+    await fs.readdir(path.join(DATA_PATH, "pokemon"))
+  ).filter((file) => file.endsWith(".json"));
 
   // I can't even begin to fathom why this only works when you seed them in National Dex order
   const evolutionUpdates = await seedInitialPokemonData(
