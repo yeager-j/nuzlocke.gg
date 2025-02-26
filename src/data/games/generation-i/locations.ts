@@ -1,5 +1,5 @@
+import { EncounterMethods } from "@/data/games/common";
 import { PokemonGame } from "@/lib/pokemon/games";
-import { EncounterMethods } from "@/lib/pokemon/games/common";
 import { GameLocation } from "@/lib/pokemon/types";
 
 export const redAndBlueLocations: GameLocation[] = [

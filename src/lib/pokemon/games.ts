@@ -1,5 +1,5 @@
-import { redAndBlueLocations } from "@/lib/pokemon/games/generation-i/locations";
-import { generation1Pokedex } from "@/lib/pokemon/games/generation-i/pokedex";
+import { redAndBlueLocations } from "@/data/games/generation-i/locations";
+import { generation1Pokedex } from "@/data/games/generation-i/pokedex";
 import { PokemonGameData } from "@/lib/pokemon/types";
 
 export enum PokemonGame {

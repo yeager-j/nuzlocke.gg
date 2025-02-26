@@ -1,6 +1,6 @@
+import { EncounterMethods } from "@/data/games/common";
 import { PokemonFormName } from "@/data/pokemon/manifest";
 import { PokemonGame } from "@/lib/pokemon/games";
-import { EncounterMethods } from "@/lib/pokemon/games/common";
 
 export type PokemonType =
   | "Normal"
