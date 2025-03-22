@@ -5,13 +5,13 @@ import {
   GameLocation,
   LocationTransformer,
   PokemonGame,
-  PokemonLocation,
+  PokemonGameLocation,
 } from "@/lib/pokeapi/types";
 import {
   applyLocationTransformation,
   getEncounterLocationsForGame,
   getEncountersAsObject,
-  LOCATION_OUTPUT_PATH,
+  getJSONOutputPath,
 } from "@/lib/pokeapi/utils";
 
 /**
@@ -23,7 +23,7 @@ import {
  * @param transformer A function that accepts the gameLocations map and returns a LocationTransformer specific to the game.
  * @return A Promise that resolves to a complete Pokémon game object, including all processed locations.
  */
-export async function buildGameData<T extends string>(
+export async function buildEncounterGameData<T extends string>(
   game: Pick<PokemonGame<T>, "id" | "name">,
   locationOrder: readonly T[],
   gameLocations: Map<string, GameLocation>,
@@ -58,7 +58,7 @@ export async function buildGameData<T extends string>(
       };
 
       return [...acc, pokemonLocation];
-    }, [] as PokemonLocation<T>[]),
+    }, [] as PokemonGameLocation<T>[]),
   };
 }
 
@@ -69,7 +69,7 @@ export async function buildGameData<T extends string>(
  * @param {readonly T[]} locationOrder - An ordered list of location identifiers used to structure the game locations.
  * @param {(gameLocations: Map<string, GameLocation>) => LocationTransformer<T>} transformer - A function that transforms the game locations into a specific format.
  */
-export async function writeJSONFile<T extends string>(
+export async function writeEncounterJSONFile<T extends string>(
   game: Pick<PokemonGame<T>, "id" | "name">,
   locationOrder: readonly T[],
   transformer: (
@@ -78,19 +78,19 @@ export async function writeJSONFile<T extends string>(
 ) {
   const gameLocations = await getEncounterLocationsForGame(game.id);
 
-  const gameData = await buildGameData(
+  const gameData = await buildEncounterGameData(
     game,
     locationOrder,
     gameLocations,
     transformer,
   );
 
-  await fs.mkdir(LOCATION_OUTPUT_PATH, {
+  await fs.mkdir(getJSONOutputPath(game.id), {
     recursive: true,
   });
 
   await fs.writeFile(
-    path.join(LOCATION_OUTPUT_PATH, `${game.id}.json`),
+    path.join(getJSONOutputPath(game.id), `encounters.json`),
     JSON.stringify(gameData, null, 2),
   );
 }

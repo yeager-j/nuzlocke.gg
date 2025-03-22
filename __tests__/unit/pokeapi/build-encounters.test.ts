@@ -1,8 +1,11 @@
 import { beforeEach, describe, expect, it } from "vitest";
 
-import { buildGameData } from "@/lib/pokeapi/build-game";
-import { LocationTransformer, PokemonGame } from "@/lib/pokeapi/types";
-import { GameLocation } from "@/lib/pokeapi/utils";
+import { buildEncounterGameData } from "@/lib/pokeapi/build-encounters";
+import {
+  GameLocation,
+  LocationTransformer,
+  PokemonGame,
+} from "@/lib/pokeapi/types";
 
 describe("buildGameData", () => {
   type TestLocation = "viridian-forest" | "mt-moon" | "cerulean-city";
@@ -49,7 +52,7 @@ describe("buildGameData", () => {
       return {};
     };
 
-    const result = await buildGameData(
+    const result = await buildEncounterGameData(
       game,
       locationOrder,
       gameLocations,
@@ -107,7 +110,7 @@ describe("buildGameData", () => {
       };
     };
 
-    const result = await buildGameData(
+    const result = await buildEncounterGameData(
       game,
       locationOrder,
       gameLocations,
@@ -149,7 +152,7 @@ describe("buildGameData", () => {
       };
     };
 
-    const result = await buildGameData(
+    const result = await buildEncounterGameData(
       game,
       locationOrder,
       gameLocations,
@@ -182,7 +185,12 @@ describe("buildGameData", () => {
     };
 
     await expect(async () => {
-      await buildGameData(game, locationOrder, gameLocations, transformer);
+      await buildEncounterGameData(
+        game,
+        locationOrder,
+        gameLocations,
+        transformer,
+      );
     }).rejects.toThrow("Unable to find location: lavender-town");
   });
 });

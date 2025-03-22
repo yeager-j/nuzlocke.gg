@@ -1,10 +1,7 @@
 import { Name } from "pokedex-promise-v2";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import {
-  getMockedPokeapiData,
-  setupMockedPokeapi,
-} from "../../pokeapi-test-utils";
+import { setupMockedPokeAPI } from "../../pokeapi-test-utils";
 
 import {
   getEncounterLocationsForGame,
@@ -86,24 +83,12 @@ vi.mock("@/lib/pokeapi/api", () => {
 });
 
 describe("getEncounterLocationsForGame", async () => {
-  const {
-    mockVersion,
-    mockLocations,
-    mockVersionGroup,
-    mockKantoRegion,
-    mockAreas,
-  } = await getMockedPokeapiData();
+  beforeEach(async () => {
+    await setupMockedPokeAPI();
+  });
 
-  beforeEach(() => {
+  afterEach(() => {
     vi.resetAllMocks();
-
-    setupMockedPokeapi({
-      mockVersion,
-      mockLocations,
-      mockVersionGroup,
-      mockKantoRegion,
-      mockAreas,
-    });
   });
 
   it("should return a map of game locations with their encounters", async () => {

@@ -1,4 +1,4 @@
-import { writeJSONFile } from "@/lib/pokeapi/build-game";
+import { writeEncounterJSONFile } from "@/lib/pokeapi/build-encounters";
 import {
   redBlueLocationHandlers,
   redBlueLocationOrder,
@@ -6,12 +6,12 @@ import {
 
 function main() {
   Promise.all([
-    writeJSONFile(
+    writeEncounterJSONFile(
       { id: "red", name: "Pokémon Red" },
       redBlueLocationOrder,
       redBlueLocationHandlers,
     ),
-    writeJSONFile(
+    writeEncounterJSONFile(
       { id: "blue", name: "Pokémon Blue" },
       redBlueLocationOrder,
       redBlueLocationHandlers,

@@ -87,6 +87,10 @@ This fetches data from PokéAPI and transforms it into an optimized format.
 
 ## Contributing
 
+> *Perfection is lots of little things done well*
+> 
+> — Marco Pierre White
+
 Contributions are welcome! Please check the issues page for current tasks or create a new issue before submitting a pull request.
 
 1. Fork the repository
@@ -94,6 +98,12 @@ Contributions are welcome! Please check the issues page for current tasks or cre
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+### Style Guide
+
+1. Give functions clear names and purposes. Each function should have one job and do it well. Avoid side effects where possible.
+2. Avoid inline comments. If your code needs a comment to be understood, try refactoring it by extracting variables or creating functions. However, always write JSDocs.
+3. When writing TypeScript types, be as strict as is practical. Additionally, if you write a type that inherits another type, consider if you could use composition instead. Be careful about coupling.
 
 ## License
 

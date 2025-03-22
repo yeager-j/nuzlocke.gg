@@ -2,14 +2,11 @@ import path from "path";
 import { vol } from "memfs";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-import {
-  getMockedPokeapiData,
-  setupMockedPokeapi,
-} from "../../pokeapi-test-utils";
+import { setupMockedPokeAPI } from "../../pokeapi-test-utils";
 
-import { writeJSONFile } from "@/lib/pokeapi/build-game";
+import { writeEncounterJSONFile } from "@/lib/pokeapi/build-encounters";
 import { LocationTransformer, PokemonGame } from "@/lib/pokeapi/types";
-import { LOCATION_OUTPUT_PATH } from "@/lib/pokeapi/utils";
+import { getJSONOutputPath } from "@/lib/pokeapi/utils";
 
 vi.mock("@/lib/pokeapi/api", () => {
   return {
@@ -26,24 +23,10 @@ vi.mock("@/lib/pokeapi/api", () => {
 vi.mock("fs/promises");
 
 describe("writeJSONFile", async () => {
-  const {
-    mockVersion,
-    mockLocations,
-    mockVersionGroup,
-    mockKantoRegion,
-    mockAreas,
-  } = await getMockedPokeapiData();
-
-  beforeEach(() => {
+  beforeEach(async () => {
     vol.reset();
 
-    setupMockedPokeapi({
-      mockVersion,
-      mockLocations,
-      mockVersionGroup,
-      mockKantoRegion,
-      mockAreas,
-    });
+    await setupMockedPokeAPI();
   });
 
   afterEach(() => {
@@ -69,10 +52,10 @@ describe("writeJSONFile", async () => {
       return {};
     };
 
-    await writeJSONFile(game, locationOrder, transformer);
+    await writeEncounterJSONFile(game, locationOrder, transformer);
 
     const gameData = vol.readFileSync(
-      path.join(LOCATION_OUTPUT_PATH, "red.json"),
+      path.join(getJSONOutputPath("red"), "encounters.json"),
       "utf-8",
     );
 
@@ -107,10 +90,10 @@ describe("writeJSONFile", async () => {
       };
     };
 
-    await writeJSONFile(game, locationOrder, transformer);
+    await writeEncounterJSONFile(game, locationOrder, transformer);
 
     const gameData = vol.readFileSync(
-      path.join(LOCATION_OUTPUT_PATH, "red.json"),
+      path.join(getJSONOutputPath("red"), "encounters.json"),
       "utf-8",
     );
 

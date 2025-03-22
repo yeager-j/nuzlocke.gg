@@ -5,10 +5,11 @@ import { pokeapi } from "@/lib/pokeapi/api";
 import {
   GameLocation,
   LocationTransformer,
-  PokemonLocation,
+  PokemonGameLocation,
 } from "@/lib/pokeapi/types";
 
-export const LOCATION_OUTPUT_PATH = path.join(process.cwd(), "public/games");
+export const getJSONOutputPath = (game: string) =>
+  path.join(process.cwd(), `public/games/${game}`);
 
 /**
  * Converts the encounters map of a game location into a plain object.
@@ -120,12 +121,12 @@ export async function getEncounterLocationsForGame(
  *
  * @param {T} location - The location string to be transformed.
  * @param {LocationTransformer<T>} locationHandlers - An object containing transformation handlers for each possible location.
- * @return {PokemonLocation<T>} The transformed PokemonLocation object corresponding to the given location.
+ * @return {PokemonGameLocation<T>} The transformed PokemonLocation object corresponding to the given location.
  */
 export function applyLocationTransformation<T extends string>(
   location: T,
   locationHandlers: LocationTransformer<T>,
-): PokemonLocation<T> {
+): PokemonGameLocation<T> {
   const locationHandler = locationHandlers[location];
 
   if (!locationHandler) {
