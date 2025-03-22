@@ -2,11 +2,11 @@ import path from "path";
 import { Name } from "pokedex-promise-v2";
 
 import { pokeapi } from "@/lib/pokeapi/api";
-
-export type GameLocation = {
-  name: string;
-  encounters: Map<string, Set<string>>;
-};
+import {
+  GameLocation,
+  LocationTransformer,
+  PokemonLocation,
+} from "@/lib/pokeapi/types";
 
 export const LOCATION_OUTPUT_PATH = path.join(process.cwd(), "public/games");
 
@@ -95,6 +95,7 @@ export async function getEncounterLocationsForGame(
         const gameVersion = encounter.version_details.find(
           (v) => v.version.name === game,
         );
+
         if (!gameVersion) return [];
 
         const pokemonName = encounter.pokemon.name;
@@ -112,4 +113,24 @@ export async function getEncounterLocationsForGame(
   });
 
   return gameLocations;
+}
+
+/**
+ * Transforms a given location string into a specific PokemonLocation instance using provided handlers.
+ *
+ * @param {T} location - The location string to be transformed.
+ * @param {LocationTransformer<T>} locationHandlers - An object containing transformation handlers for each possible location.
+ * @return {PokemonLocation<T>} The transformed PokemonLocation object corresponding to the given location.
+ */
+export function applyLocationTransformation<T extends string>(
+  location: T,
+  locationHandlers: LocationTransformer<T>,
+): PokemonLocation<T> {
+  const locationHandler = locationHandlers[location];
+
+  if (!locationHandler) {
+    throw new Error(`Unable to find location handler for: ${location}`);
+  }
+
+  return locationHandler();
 }

@@ -1,5 +1,5 @@
-import { LocationTransformer } from "@/lib/pokeapi/types";
-import { GameLocation, getEncountersAsObject } from "@/lib/pokeapi/utils";
+import { GameLocation, LocationTransformer } from "@/lib/pokeapi/types";
+import { getEncountersAsObject } from "@/lib/pokeapi/utils";
 
 export const redBlueLocationOrder = [
   "starter",

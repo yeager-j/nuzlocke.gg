@@ -1,9 +1,14 @@
 import fs from "fs/promises";
 import path from "path";
 
-import { LocationTransformer, PokemonGame } from "@/lib/pokeapi/types";
 import {
   GameLocation,
+  LocationTransformer,
+  PokemonGame,
+  PokemonLocation,
+} from "@/lib/pokeapi/types";
+import {
+  applyLocationTransformation,
   getEncounterLocationsForGame,
   getEncountersAsObject,
   LOCATION_OUTPUT_PATH,
@@ -26,35 +31,35 @@ export async function buildGameData<T extends string>(
     gameLocations: Map<string, GameLocation>,
   ) => LocationTransformer<T>,
 ): Promise<PokemonGame<T>> {
-  const gameData: PokemonGame<T> = {
-    ...game,
-    locations: [],
-  };
-
   const locationHandlers = transformer(gameLocations);
 
-  locationOrder.forEach((location) => {
-    if (location in locationHandlers) {
-      const locationHandler = locationHandlers[location];
+  return {
+    ...game,
+    locations: locationOrder.reduce((acc, prev) => {
+      if (prev in locationHandlers) {
+        const transformedLocation = applyLocationTransformation(
+          prev,
+          locationHandlers,
+        );
 
-      if (locationHandler) {
-        gameData.locations.push(locationHandler());
+        return [...acc, transformedLocation];
       }
-    } else {
-      const locationData = gameLocations.get(location);
+
+      const locationData = gameLocations.get(prev);
+
       if (!locationData) {
-        throw new Error(`Unable to find location: ${location}`);
+        throw new Error(`Unable to find location: ${prev}`);
       }
 
-      gameData.locations.push({
-        id: location,
+      const pokemonLocation = {
+        id: prev,
         name: locationData.name,
         encounters: getEncountersAsObject(locationData.encounters),
-      });
-    }
-  });
+      };
 
-  return gameData;
+      return [...acc, pokemonLocation];
+    }, [] as PokemonLocation<T>[]),
+  };
 }
 
 /**

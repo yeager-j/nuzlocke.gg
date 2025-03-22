@@ -1,3 +1,8 @@
+export type GameLocation = {
+  name: string;
+  encounters: Map<string, Set<string>>;
+};
+
 export interface PokemonGame<T extends string> {
   id: string;
   name: string;
