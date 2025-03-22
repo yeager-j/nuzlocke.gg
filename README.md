@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nuzlocke.gg (WIP)
 
-## Getting Started
+A web-based tool for tracking Pokémon Nuzlocke and Soul Link challenge runs.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Nuzlocke.gg helps Pokémon players manage their Nuzlocke challenge runs, with special focus on making Soul Link co-op runs easier to coordinate. The application allows multiple players to track their encounters in real-time, enforce challenge rules, and collaborate seamlessly.
+
+## Upcoming Features
+
+- **Solo Nuzlocke Tracking**: Track encounters, team status, and Nuzlocke rules for single-player runs
+- **Soul Link Co-op Support**: Coordinate with teammates in real-time for Soul Link challenges
+- **Route & Encounter Management**: Log caught Pokémon by route with automatic rule enforcement
+- **Party Status Tracking**: Mark Pokémon as alive, dead, or boxed with real-time updates
+- **Rule Enforcement**: Automatic validation of Soul Link rules and other challenge constraints
+- **Randomizer Support**: Compatible with randomized game runs
+- **Damage Calculator**: Built-in tools to estimate damage against key battles
+
+## Tech Stack
+
+- **Frontend**: TypeScript, Next.js (React)
+- **Backend**: Next.js
+- **APIs**: PokeAPI
+- **Hosting**: Vercel
+
+## Project Structure
+
+```
+├── __mocks__/                # Mock implementations for testing
+│   └── fs/                   # Filesystem mocks
+├── __tests__/                # Test files
+│   ├── __fixtures__/         # Test fixtures for PokeAPI
+│   ├── integration/          # Integration tests
+│   │   └── pokeapi/          # Tests for PokeAPI integration
+│   └── unit/                 # Unit tests
+├── public/                   # Static assets
+│   └── games/                # Generated game data
+├── scripts/                  # Utility scripts
+├── src/                      # Source code
+│   ├── app/                  # Next.js app directory
+│   ├── components/           # React components
+│   │   └── ui/               # UI components
+│   └── lib/                  # Core libraries
+│       └── pokeapi/          # PokeAPI integration
+│           └── games/        # Game-specific configurations
+```
+## Data Model
+
+This application manages two main data types:
+
+- **Encounters**: This is a list of per-game encounters, account for version-exclusives. I use this to display the nuzlocke tracker layout
+- **Pokemon**: This is a simplified representation of a Pokemon. I only need its name, sprite, and types.
+
+## Development
+
+### Prerequisites
+
+- Node.js 18+
+- pnpm
+
+### Setup
+
+1. Clone the repository
+   ```
+   git clone https://github.com/yeager-j/nuzlocke.gg.git
+   cd nuzlocke.gg
+   ```
+
+2. Install dependencies
+   ```
+   pnpm install
+   ```
+3. Run the development server
+   ```
+   pnpm run dev
+   ```
+
+### Downloading Pokémon Data
+
+The application uses preprocessed Pokémon data to minimize API calls. To update the data:
+
+```
+pnpm run generate-json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This fetches data from PokéAPI and transforms it into an optimized format.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Contributions are welcome! Please check the issues page for current tasks or create a new issue before submitting a pull request.
 
-## Learn More
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Acknowledgements
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Data provided by [PokéAPI](https://pokeapi.co/)
+- Inspired by the Pokémon community and Nuzlocke challenge creators, especially **pchal**.

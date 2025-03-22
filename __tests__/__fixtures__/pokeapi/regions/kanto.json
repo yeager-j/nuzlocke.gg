@@ -1,0 +1,124 @@
+{
+  "id": 1,
+  "locations": [
+    {
+      "name": "pallet-town",
+      "url": "https://pokeapi.co/api/v2/location/86/"
+    },
+    {
+      "name": "kanto-route-1",
+      "url": "https://pokeapi.co/api/v2/location/88/"
+    },
+    {
+      "name": "viridian-city",
+      "url": "https://pokeapi.co/api/v2/location/154/"
+    },
+    {
+      "name": "viridian-forest",
+      "url": "https://pokeapi.co/api/v2/location/155/"
+    }
+  ],
+  "main_generation": {
+    "name": "generation-i",
+    "url": "https://pokeapi.co/api/v2/generation/1/"
+  },
+  "name": "kanto",
+  "names": [
+    {
+      "language": {
+        "name": "ja-Hrkt",
+        "url": "https://pokeapi.co/api/v2/language/1/"
+      },
+      "name": "カントー"
+    },
+    {
+      "language": {
+        "name": "ko",
+        "url": "https://pokeapi.co/api/v2/language/3/"
+      },
+      "name": "관동"
+    },
+    {
+      "language": {
+        "name": "zh-Hant",
+        "url": "https://pokeapi.co/api/v2/language/4/"
+      },
+      "name": "關都"
+    },
+    {
+      "language": {
+        "name": "fr",
+        "url": "https://pokeapi.co/api/v2/language/5/"
+      },
+      "name": "Kanto"
+    },
+    {
+      "language": {
+        "name": "de",
+        "url": "https://pokeapi.co/api/v2/language/6/"
+      },
+      "name": "Kanto"
+    },
+    {
+      "language": {
+        "name": "it",
+        "url": "https://pokeapi.co/api/v2/language/8/"
+      },
+      "name": "Kanto"
+    },
+    {
+      "language": {
+        "name": "en",
+        "url": "https://pokeapi.co/api/v2/language/9/"
+      },
+      "name": "Kanto"
+    },
+    {
+      "language": {
+        "name": "zh-Hans",
+        "url": "https://pokeapi.co/api/v2/language/12/"
+      },
+      "name": "关都"
+    }
+  ],
+  "pokedexes": [
+    {
+      "name": "kanto",
+      "url": "https://pokeapi.co/api/v2/pokedex/2/"
+    },
+    {
+      "name": "letsgo-kanto",
+      "url": "https://pokeapi.co/api/v2/pokedex/26/"
+    }
+  ],
+  "version_groups": [
+    {
+      "name": "red-blue",
+      "url": "https://pokeapi.co/api/v2/version-group/1/"
+    },
+    {
+      "name": "yellow",
+      "url": "https://pokeapi.co/api/v2/version-group/2/"
+    },
+    {
+      "name": "gold-silver",
+      "url": "https://pokeapi.co/api/v2/version-group/3/"
+    },
+    {
+      "name": "crystal",
+      "url": "https://pokeapi.co/api/v2/version-group/4/"
+    },
+    {
+      "name": "firered-leafgreen",
+      "url": "https://pokeapi.co/api/v2/version-group/7/"
+    },
+    {
+      "name": "heartgold-soulsilver",
+      "url": "https://pokeapi.co/api/v2/version-group/10/"
+    },
+    {
+      "name": "lets-go-pikachu-lets-go-eevee",
+      "url": "https://pokeapi.co/api/v2/version-group/19/"
+    }
+  ]
+}

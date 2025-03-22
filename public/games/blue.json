@@ -1,0 +1,864 @@
+{
+  "id": "blue",
+  "name": "Pokémon Blue",
+  "locations": [
+    {
+      "id": "starter",
+      "name": "Starter",
+      "encounters": {
+        "gift": [
+          "bulbasaur",
+          "charmander",
+          "squirtle"
+        ]
+      }
+    },
+    {
+      "id": "pallet-town",
+      "name": "Pallet Town",
+      "encounters": {
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "poliwag",
+          "tentacool"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-1",
+      "name": "Route 1",
+      "encounters": {
+        "walk": [
+          "pidgey",
+          "rattata"
+        ]
+      }
+    },
+    {
+      "id": "viridian-city",
+      "name": "Viridian City",
+      "encounters": {
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "poliwag",
+          "tentacool"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-22",
+      "name": "Route 22",
+      "encounters": {
+        "walk": [
+          "rattata",
+          "spearow",
+          "nidoran-f",
+          "nidoran-m"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-2",
+      "name": "Route 2",
+      "encounters": {
+        "walk": [
+          "caterpie",
+          "pidgey",
+          "rattata"
+        ]
+      }
+    },
+    {
+      "id": "viridian-forest",
+      "name": "Viridian Forest",
+      "encounters": {
+        "walk": [
+          "caterpie",
+          "metapod",
+          "weedle",
+          "kakuna",
+          "pikachu"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-3",
+      "name": "Route 3",
+      "encounters": {
+        "walk": [
+          "pidgey",
+          "spearow",
+          "jigglypuff"
+        ],
+        "gift": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-4",
+      "name": "Route 4",
+      "encounters": {
+        "walk": [
+          "rattata",
+          "spearow",
+          "sandshrew"
+        ],
+        "gift": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "mt-moon",
+      "name": "Mt. Moon",
+      "encounters": {
+        "walk": [
+          "clefairy",
+          "zubat",
+          "paras",
+          "geodude"
+        ]
+      }
+    },
+    {
+      "id": "cerulean-city",
+      "name": "Cerulean City",
+      "encounters": {
+        "super-rod": [
+          "psyduck",
+          "krabby",
+          "goldeen"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-24",
+      "name": "Route 24",
+      "encounters": {
+        "walk": [
+          "caterpie",
+          "metapod",
+          "pidgey",
+          "abra",
+          "bellsprout"
+        ],
+        "super-rod": [
+          "psyduck",
+          "krabby",
+          "goldeen"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-25",
+      "name": "Route 25",
+      "encounters": {
+        "walk": [
+          "caterpie",
+          "metapod",
+          "weedle",
+          "kakuna",
+          "pidgey",
+          "abra",
+          "bellsprout"
+        ],
+        "super-rod": [
+          "psyduck",
+          "krabby",
+          "goldeen"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-5",
+      "name": "Route 5",
+      "encounters": {
+        "walk": [
+          "pidgey",
+          "meowth",
+          "bellsprout"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-6",
+      "name": "Route 6",
+      "encounters": {
+        "walk": [
+          "pidgey",
+          "meowth",
+          "bellsprout"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "shellder",
+          "krabby"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "vermilion-city",
+      "name": "Vermilion City",
+      "encounters": {
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "shellder",
+          "krabby"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-11",
+      "name": "Route 11",
+      "encounters": {
+        "walk": [
+          "spearow",
+          "sandshrew",
+          "drowzee"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "shellder",
+          "krabby"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "digletts-cave",
+      "name": "Diglett's Cave",
+      "encounters": {
+        "walk": [
+          "diglett",
+          "dugtrio"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-9",
+      "name": "Route 9",
+      "encounters": {
+        "walk": [
+          "rattata",
+          "spearow",
+          "sandshrew"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-10",
+      "name": "Route 10",
+      "encounters": {
+        "walk": [
+          "spearow",
+          "sandshrew",
+          "voltorb"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "poliwhirl",
+          "slowpoke"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "rock-tunnel",
+      "name": "Rock Tunnel",
+      "encounters": {
+        "walk": [
+          "zubat",
+          "machop",
+          "geodude",
+          "onix"
+        ]
+      }
+    },
+    {
+      "id": "pokemon-tower",
+      "name": "Pokémon Tower",
+      "encounters": {
+        "walk": [
+          "gastly",
+          "haunter",
+          "cubone"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-12",
+      "name": "Route 12",
+      "encounters": {
+        "walk": [
+          "pidgey",
+          "venonat",
+          "bellsprout",
+          "weepinbell"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "tentacool",
+          "krabby",
+          "goldeen",
+          "magikarp"
+        ],
+        "old-rod": [
+          "magikarp"
+        ],
+        "pokeflute": [
+          "snorlax"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-8",
+      "name": "Route 8",
+      "encounters": {
+        "walk": [
+          "pidgey",
+          "sandshrew",
+          "vulpix",
+          "meowth"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-7",
+      "name": "Route 7",
+      "encounters": {
+        "walk": [
+          "pidgey",
+          "vulpix",
+          "meowth",
+          "bellsprout"
+        ]
+      }
+    },
+    {
+      "id": "celadon-city",
+      "name": "Celadon City",
+      "encounters": {
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "poliwhirl",
+          "slowpoke"
+        ],
+        "old-rod": [
+          "magikarp"
+        ],
+        "gift": [
+          "eevee"
+        ]
+      }
+    },
+    {
+      "id": "saffron-city",
+      "name": "Saffron City",
+      "encounters": {
+        "gift": [
+          "hitmonlee",
+          "hitmonchan",
+          "lapras"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-16",
+      "name": "Route 16",
+      "encounters": {
+        "walk": [
+          "rattata",
+          "raticate",
+          "spearow",
+          "doduo"
+        ],
+        "pokeflute": [
+          "snorlax"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-17",
+      "name": "Route 17",
+      "encounters": {
+        "walk": [
+          "raticate",
+          "spearow",
+          "fearow",
+          "doduo"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "tentacool",
+          "krabby",
+          "goldeen",
+          "magikarp"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-18",
+      "name": "Route 18",
+      "encounters": {
+        "walk": [
+          "raticate",
+          "spearow",
+          "fearow",
+          "doduo"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "tentacool",
+          "krabby",
+          "goldeen",
+          "magikarp"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "fuchsia-city",
+      "name": "Fuchsia City",
+      "encounters": {
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "krabby",
+          "goldeen",
+          "seaking",
+          "magikarp"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-safari-zone",
+      "name": "Safari Zone",
+      "encounters": {
+        "walk": [
+          "nidoran-f",
+          "nidorina",
+          "nidorino",
+          "parasect",
+          "venonat",
+          "exeggcute",
+          "rhyhorn",
+          "chansey",
+          "pinsir",
+          "nidoran-m",
+          "paras",
+          "doduo",
+          "kangaskhan",
+          "venomoth",
+          "tauros"
+        ],
+        "super-rod": [
+          "psyduck",
+          "slowpoke",
+          "krabby",
+          "dratini"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-15",
+      "name": "Route 15",
+      "encounters": {
+        "walk": [
+          "pidgey",
+          "pidgeotto",
+          "venonat",
+          "bellsprout",
+          "weepinbell",
+          "ditto"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-14",
+      "name": "Route 14",
+      "encounters": {
+        "walk": [
+          "pidgey",
+          "pidgeotto",
+          "venonat",
+          "bellsprout",
+          "weepinbell",
+          "ditto"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-13",
+      "name": "Route 13",
+      "encounters": {
+        "walk": [
+          "pidgey",
+          "venonat",
+          "bellsprout",
+          "weepinbell",
+          "ditto"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "tentacool",
+          "krabby",
+          "goldeen",
+          "magikarp"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "power-plant",
+      "name": "Power Plant",
+      "encounters": {
+        "walk": [
+          "pikachu",
+          "raichu",
+          "magnemite",
+          "magneton",
+          "voltorb"
+        ],
+        "only-one": [
+          "voltorb",
+          "electrode",
+          "zapdos"
+        ]
+      }
+    },
+    {
+      "id": "kanto-sea-route-19",
+      "name": "Sea Route 19",
+      "encounters": {
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "surf": [
+          "tentacool"
+        ],
+        "super-rod": [
+          "shellder",
+          "horsea",
+          "goldeen",
+          "staryu"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-sea-route-20",
+      "name": "Sea Route 20",
+      "encounters": {
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "surf": [
+          "tentacool"
+        ],
+        "super-rod": [
+          "shellder",
+          "horsea",
+          "goldeen",
+          "staryu"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "seafoam-islands",
+      "name": "Seafoam Islands",
+      "encounters": {
+        "walk": [
+          "zubat",
+          "golbat",
+          "psyduck",
+          "slowpoke",
+          "slowbro",
+          "seel",
+          "krabby",
+          "staryu",
+          "dewgong",
+          "shellder",
+          "kingler",
+          "golduck"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "shellder",
+          "horsea",
+          "goldeen",
+          "staryu"
+        ],
+        "old-rod": [
+          "magikarp"
+        ],
+        "only-one": [
+          "articuno"
+        ]
+      }
+    },
+    {
+      "id": "cinnabar-island",
+      "name": "Cinnabar Island",
+      "encounters": {
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "shellder",
+          "horsea",
+          "goldeen",
+          "staryu"
+        ],
+        "old-rod": [
+          "magikarp"
+        ],
+        "gift": [
+          "omanyte",
+          "kabuto",
+          "aerodactyl"
+        ]
+      }
+    },
+    {
+      "id": "pokemon-mansion",
+      "name": "Pokémon Mansion",
+      "encounters": {
+        "walk": [
+          "vulpix",
+          "ponyta",
+          "grimer",
+          "muk",
+          "koffing",
+          "weezing",
+          "magmar"
+        ]
+      }
+    },
+    {
+      "id": "kanto-sea-route-21",
+      "name": "Sea Route 21",
+      "encounters": {
+        "walk": [
+          "pidgey",
+          "pidgeotto",
+          "rattata",
+          "raticate",
+          "tangela"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "surf": [
+          "tentacool"
+        ],
+        "super-rod": [
+          "shellder",
+          "horsea",
+          "goldeen",
+          "staryu"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-23",
+      "name": "Route 23",
+      "encounters": {
+        "walk": [
+          "spearow",
+          "fearow",
+          "sandshrew",
+          "sandslash",
+          "ditto"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "slowbro",
+          "kingler",
+          "seadra",
+          "seaking"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-victory-road",
+      "name": "Kanto Victory Road",
+      "encounters": {
+        "walk": [
+          "zubat",
+          "golbat",
+          "machop",
+          "machoke",
+          "geodude",
+          "graveler",
+          "onix",
+          "marowak",
+          "venomoth"
+        ],
+        "only-one": [
+          "moltres"
+        ]
+      }
+    },
+    {
+      "id": "cerulean-cave",
+      "name": "Cerulean Cave",
+      "encounters": {
+        "walk": [
+          "raichu",
+          "sandslash",
+          "golbat",
+          "parasect",
+          "venomoth",
+          "kadabra",
+          "magneton",
+          "dodrio",
+          "hypno",
+          "ditto",
+          "wigglytuff",
+          "electrode",
+          "marowak",
+          "rhydon",
+          "chansey"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "slowbro",
+          "kingler",
+          "seadra",
+          "seaking"
+        ],
+        "old-rod": [
+          "magikarp"
+        ],
+        "only-one": [
+          "mewtwo"
+        ]
+      }
+    }
+  ]
+}

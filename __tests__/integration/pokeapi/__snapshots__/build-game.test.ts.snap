@@ -1,0 +1,146 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`writeJSONFile > should apply custom location transformers when provided 1`] = `
+"{
+  "id": "red",
+  "name": "Pokémon Red",
+  "locations": [
+    {
+      "id": "pallet-town",
+      "name": "Pallet Town",
+      "encounters": {
+        "gift": [
+          "bulbasaur",
+          "charmander",
+          "squirtle"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "poliwag",
+          "tentacool"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-1",
+      "name": "Route 1",
+      "encounters": {
+        "walk": [
+          "pidgey",
+          "rattata"
+        ]
+      }
+    },
+    {
+      "id": "viridian-city",
+      "name": "Viridian City",
+      "encounters": {
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "poliwag",
+          "tentacool"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "viridian-forest",
+      "name": "Viridian Forest",
+      "encounters": {
+        "walk": [
+          "pikachu",
+          "caterpie",
+          "weedle",
+          "kakuna",
+          "metapod"
+        ],
+        "special": [
+          "bulbasaur"
+        ]
+      }
+    }
+  ]
+}"
+`;
+
+exports[`writeJSONFile > should write a JSON file with the correct game data 1`] = `
+"{
+  "id": "red",
+  "name": "Pokémon Red",
+  "locations": [
+    {
+      "id": "pallet-town",
+      "name": "Pallet Town",
+      "encounters": {
+        "gift": [
+          "bulbasaur",
+          "charmander",
+          "squirtle"
+        ],
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "poliwag",
+          "tentacool"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "kanto-route-1",
+      "name": "Route 1",
+      "encounters": {
+        "walk": [
+          "pidgey",
+          "rattata"
+        ]
+      }
+    },
+    {
+      "id": "viridian-city",
+      "name": "Viridian City",
+      "encounters": {
+        "good-rod": [
+          "poliwag",
+          "goldeen"
+        ],
+        "super-rod": [
+          "poliwag",
+          "tentacool"
+        ],
+        "old-rod": [
+          "magikarp"
+        ]
+      }
+    },
+    {
+      "id": "viridian-forest",
+      "name": "Viridian Forest",
+      "encounters": {
+        "walk": [
+          "caterpie",
+          "metapod",
+          "weedle",
+          "kakuna",
+          "pikachu"
+        ]
+      }
+    }
+  ]
+}"
+`;
